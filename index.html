@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI활용 포트폴리오 웹페이지 만들기</title>
+<meta name="description" content="미래 역량 인공지능 아카데미 - AI 메이킹 클래스 : 윤리부터 창작까지 | PROMPT 6요소로 내 포트폴리오 웹페이지를 만들고, 깃허브로 배포하고, 함께 자랑하기">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Myeongjo:wght@800&family=Nanum+Pen+Script&family=Gowun+Batang:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== 상단 메뉴 ===================== -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo" aria-label="맨 위로">
+    <img src="images/logo.svg" alt="" width="32" height="32">
+    <span>AI Portfolio <em>Class</em></span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-menu" id="navMenu">
+    <a href="#prompt">PROMPT</a>
+    <a href="#merits">AI 활용 장점</a>
+    <a href="#guide">작성 가이드</a>
+    <a href="#tips">작성 요령</a>
+    <a href="#examples">프롬프트 예시</a>
+    <a href="#builder">프롬프트 작성</a>
+    <a href="#deploy">배포</a>
+    <a href="#gallery" class="nav-cta">자랑하기</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="masthead">
+    <span>ISSUE <b>No.01</b></span>
+    <span class="mh-center">미래 역량 인공지능 아카데미</span>
+    <span>2026 <b>AUTUMN</b></span>
+  </div>
+
+  <img src="images/blob-pink.svg" class="deco deco-1" alt="">
+  <img src="images/blob-mint.svg" class="deco deco-2" alt="">
+  <img src="images/star.svg" class="deco deco-3" alt="">
+  <img src="images/star.svg" class="deco deco-4" alt="">
+
+  <div class="hero-inner">
+    <p class="hero-kicker">AI MAKING CLASS · SPECIAL LECTURE</p>
+    <h1 class="hero-title">AI 메이킹 클래스</h1>
+    <p class="hero-sub"><span>윤리부터</span> <span>창작까지</span></p>
+
+    <div class="cover-story">
+      <span class="cs-tag">COVER STORY</span>
+      <span class="cs-title">AI활용 포트폴리오 웹페이지 만들기</span>
+    </div>
+
+    <div class="cards" id="promptCards" aria-label="PROMPT 6요소">
+      <div class="slot" data-i="0"><div class="floater"><div class="pcard c-p1"><b>P</b><small>Purpose</small></div></div></div>
+      <div class="slot" data-i="1"><div class="floater"><div class="pcard c-r"><b>R</b><small>Real contents</small></div></div></div>
+      <div class="slot" data-i="2"><div class="floater"><div class="pcard c-o"><b>O</b><small>Output look</small></div></div></div>
+      <div class="slot" data-i="3"><div class="floater"><div class="pcard c-m"><b>M</b><small>Must-haves</small></div></div></div>
+      <div class="slot" data-i="4"><div class="floater"><div class="pcard c-p2"><b>P</b><small>Persona</small></div></div></div>
+      <div class="slot" data-i="5"><div class="floater"><div class="pcard c-t"><b>T</b><small>Tune</small></div></div></div>
+    </div>
+    <p class="hero-hint">카드에 마우스를 올리거나 끌어 보세요!</p>
+  </div>
+
+  <div class="hero-index">
+    <span>01 PROMPT</span><span>02 장점</span><span>03 가이드</span><span>04 요령</span>
+    <span>05 예시</span><span>06 작성</span><span>07 배포</span><span>08 자랑하기</span>
+  </div>
+</section>
+
+<!-- ===================== 01 PROMPT ===================== -->
+<section class="section" id="prompt">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">01</span>
+      <div>
+        <p class="eyebrow">PROMPT · 프롬프트란?</p>
+        <h2 class="sec-title">코드를 몰라도,<br><em>말로</em> 웹페이지를 만든다</h2>
+      </div>
+    </header>
+    <p class="sec-lead dropcap">프롬프트는 AI에게 보내는 <b>작업 요청서</b>입니다. "포트폴리오 만들어줘" 한 줄로는 남의 이야기가 담긴 평범한 견본이 나옵니다. 여섯 가지만 챙겨서 쓰면, AI가 <b>나만의 포트폴리오</b>를 만들어 줍니다.</p>
+
+    <div class="el-grid">
+      <article class="el-card b-p1">
+        <div class="el-letter">P</div>
+        <h3>Purpose <span>목적</span></h3>
+        <p class="el-q">누구에게, 무엇을 보여줄 페이지인가?</p>
+        <p>페이지를 만드는 이유와 보는 사람을 한두 문장으로 씁니다.</p>
+      </article>
+      <article class="el-card b-r">
+        <div class="el-letter">R</div>
+        <h3>Real contents <span>실제 내용</span></h3>
+        <p class="el-q">페이지에 들어갈 나의 이야기는?</p>
+        <p>이름, 소개, 강점, 경험, 연락처를 직접 적습니다. 가장 중요한 요소입니다.</p>
+      </article>
+      <article class="el-card b-o">
+        <div class="el-letter">O</div>
+        <h3>Output look <span>디자인</span></h3>
+        <p class="el-q">어떤 분위기와 모습이면 좋을까?</p>
+        <p>분위기, 색, 배치, 움직임을 고를 수 있는 말로 구체적으로 씁니다.</p>
+      </article>
+      <article class="el-card b-m">
+        <div class="el-letter">M</div>
+        <h3>Must-haves <span>형식 조건</span></h3>
+        <p class="el-q">바로 열어 볼 수 있게 하려면?</p>
+        <p>"HTML 파일 하나로", "휴대폰에서도 보기 좋게" 같은 꼭 지킬 조건입니다.</p>
+      </article>
+      <article class="el-card b-p2">
+        <div class="el-letter">P</div>
+        <h3>Persona <span>역할</span></h3>
+        <p class="el-q">AI가 누구처럼 만들어 주면 좋을까?</p>
+        <p>"너는 웹 디자이너야"처럼 AI에게 전문가 역할을 한 문장으로 줍니다.</p>
+      </article>
+      <article class="el-card b-t">
+        <div class="el-letter">T</div>
+        <h3>Tune <span>다듬기</span></h3>
+        <p class="el-q">결과를 보고 어디를, 어떻게 고칠까?</p>
+        <p>첫 결과물은 시작일 뿐! 보면서 고쳐 달라고 요청하며 완성합니다.</p>
+      </article>
+    </div>
+
+    <blockquote class="mnemonic">
+      <span class="q-mark">“</span>
+      <p><span class="m-p1">무엇을 위해(P)</span> <span class="m-r">내 이야기를 담아(R)</span> <span class="m-o">원하는 분위기로(O)</span> <span class="m-m">바로 열리게(M)</span> <span class="m-p2">디자이너처럼 만들고(P)</span> <span class="m-t">보면서 다듬기(T)!</span></p>
+      <cite>— 오늘의 기억 문장</cite>
+    </blockquote>
+
+    <h3 class="sub-title"><span>HOW TO</span> 프롬프트, 이렇게 활용해요</h3>
+    <ol class="flow">
+      <li><span class="flow-num">1</span><b>채우기</b><p>'프롬프트 작성'에서 내 이야기와 O·M·P·T를 채웁니다.</p></li>
+      <li><span class="flow-num">2</span><b>복사·붙여넣기</b><p>완성된 프롬프트를 복사해 AI 채팅창에 붙여 넣습니다.</p></li>
+      <li><span class="flow-num">3</span><b>결과 확인</b><p>AI가 만든 웹페이지를 미리보기로 열어 봅니다.</p></li>
+      <li><span class="flow-num">4</span><b>다듬기</b><p>마음에 들지 않는 곳을 "어디를, 어떻게"로 고쳐 달라고 합니다.</p></li>
+      <li><span class="flow-num">5</span><b>배포·자랑</b><p>깃허브로 주소를 만들고 '자랑하기'에 올립니다.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 02 AI 활용 장점 ===================== -->
+<section class="section alt" id="merits">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">02</span>
+      <div>
+        <p class="eyebrow">WHY AI · AI 활용 장점</p>
+        <h2 class="sec-title">비전공자에게<br><em>AI</em>가 좋은 이유</h2>
+      </div>
+    </header>
+    <p class="sec-lead dropcap">예전에는 웹페이지 하나를 만들려면 HTML, CSS, JavaScript를 몇 달은 배워야 했습니다. 이제는 내가 원하는 것을 <b>정확하게 말하는 능력</b>이 가장 중요한 기술입니다.</p>
+
+    <div class="merit-grid">
+      <article class="merit"><span class="merit-no">01</span><div class="merit-ico">💬</div><h3>코드 대신 우리말로</h3><p>프로그래밍 언어를 몰라도 평소 쓰는 말로 요청하면 AI가 코드를 대신 써 줍니다.</p></article>
+      <article class="merit"><span class="merit-no">02</span><div class="merit-ico">⏱️</div><h3>몇 달이 아니라 몇 분</h3><p>디자인부터 코드까지 직접 하면 며칠이 걸릴 일을 한 번의 요청으로 시작할 수 있습니다.</p></article>
+      <article class="merit"><span class="merit-no">03</span><div class="merit-ico">🎨</div><h3>디자인 감각을 빌려 쓰기</h3><p>색 조합이나 배치를 잘 몰라도 "따뜻한 파스텔톤"처럼 원하는 느낌만 말하면 됩니다.</p></article>
+      <article class="merit"><span class="merit-no">04</span><div class="merit-ico">🔁</div><h3>마음껏 고치고 다시 하기</h3><p>마음에 들 때까지 몇 번이고 수정을 요청할 수 있습니다. 실패해도 비용이 없습니다.</p></article>
+      <article class="merit"><span class="merit-no">05</span><div class="merit-ico">🪞</div><h3>나를 정리하는 시간</h3><p>프롬프트에 내 강점과 경험을 적다 보면, 자기소개서와 면접 준비가 함께 됩니다.</p></article>
+      <article class="merit"><span class="merit-no">06</span><div class="merit-ico">🔗</div><h3>링크 하나로 나를 소개</h3><p>완성한 웹페이지는 이력서, SNS 프로필, 명함에 링크로 넣어 언제든 보여줄 수 있습니다.</p></article>
+    </div>
+
+    <div class="caution">
+      <h3><span>ETHICS</span> 만들기 전에 꼭 기억해요</h3>
+      <ul>
+        <li><b>AI는 지어낼 수 있습니다.</b> 내가 주지 않은 경력·수상 내역이 들어가지 않았는지 반드시 확인합니다.</li>
+        <li><b>개인정보는 조심해서.</b> 전화번호, 집 주소, 학번은 공개 페이지에 넣지 말고 이메일 정도만 씁니다.</li>
+        <li><b>사진과 글의 권리를 지킵니다.</b> 인터넷에서 가져온 남의 사진·로고는 쓰지 않고, 내가 찍은 사진을 씁니다.</li>
+        <li><b>최종 책임은 나에게.</b> AI가 만든 결과물이라도 내 이름으로 공개되는 것이니, 내용이 사실인지 끝까지 확인합니다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 작성 가이드 ===================== -->
+<section class="section" id="guide">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">03</span>
+      <div>
+        <p class="eyebrow">GUIDE · 작성 가이드</p>
+        <h2 class="sec-title">무엇부터 써야 할까?<br><em>우선순위</em></h2>
+      </div>
+    </header>
+    <p class="sec-lead dropcap">여섯 가지를 모두 쓰면 가장 좋지만, 시간이 없을 때는 중요한 것부터 챙깁니다. <b>목적(P)과 실제 내용(R)</b>이 없으면 아무리 디자인을 잘 설명해도 "나의" 포트폴리오가 되지 않습니다.</p>
+
+    <div class="priority">
+      <div class="tier tier-1">
+        <div class="tier-head"><span class="tier-rank">1순위</span><h3>핵심 · 반드시</h3></div>
+        <div class="tier-chips"><span class="chip-el c-p1">P 목적</span><span class="chip-el c-r">R 실제 내용</span></div>
+        <p>빠뜨리면 → 가짜 이름과 경력이 들어간 <b>남의 견본 페이지</b>가 나옵니다.</p>
+      </div>
+      <div class="tier tier-2">
+        <div class="tier-head"><span class="tier-rank">2순위</span><h3>완성도 · 꼭 권장</h3></div>
+        <div class="tier-chips"><span class="chip-el c-o">O 디자인</span><span class="chip-el c-m">M 형식 조건</span></div>
+        <p>빠뜨리면 → 원하는 분위기와 다르거나, 열어 볼 수 없는 형태로 나옵니다.</p>
+      </div>
+      <div class="tier tier-3">
+        <div class="tier-head"><span class="tier-rank">3순위</span><h3>보완 · 있으면 더 좋음</h3></div>
+        <div class="tier-chips"><span class="chip-el c-p2">P 역할</span><span class="chip-el c-t">T 다듬기</span></div>
+        <p>빠뜨리면 → 평범한 디자인에서 멈추고, 아쉬운 부분이 그대로 남습니다.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <div class="why-text">
+        <h3>왜 목적(P)이<br>맨 앞일까요?</h3>
+        <p>같은 사람의 포트폴리오라도 <b>누구에게 보여주느냐</b>에 따라 강조할 내용이 달라집니다. 취업 면접관에게는 경험과 성과를, 동아리 신입생에게는 친근한 소개를, 고객에게는 작업물을 앞세워야 합니다. 목적이 분명하면 AI가 그에 맞게 순서와 분위기를 정합니다.</p>
+      </div>
+      <div class="compare">
+        <div class="cmp bad"><span class="cmp-tag">😥 목적 없이</span><p>포트폴리오 웹사이트 만들어줘.</p></div>
+        <div class="cmp good"><span class="cmp-tag">😊 목적을 담아</span><p>취업 준비 중인 경영학과 4학년인 내가 면접관에게 나의 경험과 강점을 보여줄 포트폴리오 웹페이지를 만들고 싶어.</p></div>
+      </div>
+    </div>
+
+    <div class="guide-tips">
+      <div class="gtip"><b>✍️ 쓰는 순서</b><p>P → R을 먼저 채우고, O에서 디자인을 고른 뒤, M·P·T는 기본 문장을 그대로 써도 충분합니다.</p></div>
+      <div class="gtip"><b>📋 미리 준비</b><p>R(실제 내용)은 시간이 가장 오래 걸립니다. 자기소개, 경험 목록을 미리 메모해 오면 좋아요.</p></div>
+      <div class="gtip"><b>🎯 구체적으로</b><p>"예쁘게", "멋지게"는 AI마다 다르게 해석합니다. 색·배치·크기처럼 눈에 보이는 말로 씁니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04 작성 요령 ===================== -->
+<section class="section alt" id="tips">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">04</span>
+      <div>
+        <p class="eyebrow">TIPS · 작성 요령</p>
+        <h2 class="sec-title">요소별<br><em>작성 요령</em></h2>
+      </div>
+    </header>
+    <p class="sec-lead">각 요소를 눌러 아쉬운 예와 좋은 예를 비교해 보세요.</p>
+    <div class="acc" id="tipsAcc"><!-- js/data.js 에서 채움 --></div>
+  </div>
+</section>
+
+<!-- ===================== 05 프롬프트 예시 ===================== -->
+<section class="section" id="examples">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">05</span>
+      <div>
+        <p class="eyebrow">EXAMPLES · 프롬프트 예시</p>
+        <h2 class="sec-title">보고, 고르고,<br><em>따라 쓰기</em></h2>
+      </div>
+    </header>
+
+    <div class="ex-block">
+      <h3 class="ex-title"><span class="chip-el c-r">R</span> 실제 내용, 이만큼 구체적으로!</h3>
+      <p class="ex-desc">경험은 <b>제목 / 기간 / 역할 / 한 일 / 결과</b> 순서로, 결과는 가능하면 <b>숫자</b>로 적어요. 목적이 다른 네 학생의 예시를 살펴보세요.</p>
+      <div class="tabs" id="rTabs" role="tablist"></div>
+      <div class="r-panel" id="rPanel"></div>
+    </div>
+
+    <div class="ex-block">
+      <h3 class="ex-title"><span class="chip-el c-o">O</span> 디자인, 골라서 담기</h3>
+      <p class="ex-desc">마음에 드는 표현을 누르면 '프롬프트 작성'의 <b>O 칸에 바로 담깁니다.</b> 분야마다 하나씩 고르면 충분해요. <span class="wow">WOW</span> 표시는 결과물을 보고 "우와~" 소리가 나오게 해 주는 화려한 효과예요.</p>
+      <div class="o-groups" id="oGroups"></div>
+    </div>
+
+    <div class="ex-block">
+      <h3 class="ex-title"><span class="chip-el c-ink">ALL</span> 완성된 프롬프트 한눈에 보기</h3>
+      <div class="full-ex">
+        <button class="btn btn-sm btn-copy" data-copy="fullExample">복사하기</button>
+        <pre id="fullExample"></pre>
+      </div>
+    </div>
+
+    <div class="ex-block">
+      <h3 class="ex-title"><span class="chip-el c-t">T</span> 다듬기, 이렇게 요청해요</h3>
+      <p class="ex-desc">결과를 보고 <b>어디를 + 어떻게</b> 고칠지 말합니다. 한 번에 한두 가지씩! 문장을 누르면 복사됩니다.</p>
+      <div class="tune-grid" id="tuneGrid"></div>
+      <div class="tune-rule">
+        <div><b>❌ 막연하게</b><p>"별로야, 다시 해줘."</p></div>
+        <div><b>⭕ 구체적으로</b><p>"경험 카드가 너무 붙어 있어. 카드 사이 간격을 지금보다 두 배 넓혀줘."</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 프롬프트 작성 ===================== -->
+<section class="section alt" id="builder">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">06</span>
+      <div>
+        <p class="eyebrow">WRITE · 프롬프트 작성</p>
+        <h2 class="sec-title">나만의 프롬프트<br><em>만들기</em></h2>
+      </div>
+    </header>
+    <p class="sec-lead"><b>목적</b>을 먼저 고르고 <b>필수 5가지</b>를 채우면 P(목적)·R(실제 내용)이 정리되고, <b>O·M·P·T</b>까지 더하면 오른쪽에 프롬프트가 완성됩니다. M·P·T에는 기본 문장이 들어 있어요. 입력한 내용은 이 브라우저에 자동 저장됩니다.</p>
+
+    <div class="b-steps">
+      <span class="b-step"><b>1</b>목적 고르기</span>
+      <span class="b-step"><b>2</b>필수 5가지</span>
+      <span class="b-step"><b>3</b>목적에 맞는 내용</span>
+      <span class="b-step"><b>4</b>더하면 좋은 내용</span>
+      <span class="b-step"><b>5</b>디자인·조건 (O·M·P·T)</span>
+    </div>
+
+    <div class="builder">
+      <div class="b-form" id="bForm">
+
+        <!-- STEP 1 목적 -->
+        <div class="b-block b-purpose">
+          <div class="b-block-head">
+            <span class="b-tag">STEP 1</span>
+            <h3>포트폴리오 목적 고르기</h3>
+            <span class="req">필수</span>
+          </div>
+          <div class="b-block-body">
+            <div class="purpose-grid" id="purposeGrid"></div>
+            <div class="sub-list" id="purposeFields"></div>
+            <div class="item sub p-item">
+              <div class="item-head">
+                <label for="f-pText">목적 문장 <span class="p-chip">P</span></label>
+                <span class="opt">자동 완성</span>
+                <button type="button" class="field-reset" id="pReset" hidden>자동 문장으로</button>
+              </div>
+              <p class="help help-flat">고른 목적과 입력한 내용으로 자동으로 만들어져요. 직접 고쳐 써도 돼요.</p>
+              <textarea id="f-pText" rows="2" placeholder="목적을 고르면 문장이 자동으로 만들어져요."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 필수 5가지 -->
+        <div class="b-block b-need">
+          <div class="b-block-head">
+            <span class="b-tag">STEP 2</span>
+            <h3>꼭 들어가야 하는 5가지</h3>
+            <span class="b-progress"><span class="b-bar"><i id="needBar"></i></span><span id="needText">0 / 5</span></span>
+          </div>
+          <div class="b-block-body">
+
+            <div class="item" data-need="intro">
+              <div class="item-head"><span class="num"><span>1</span></span><h4>이름과 한 줄 소개</h4><span class="req">필수</span></div>
+              <p class="help">한 줄 소개는 "열정적인 사람"보다 직무나 관심 분야가 드러나게 써요.</p>
+              <div class="fields">
+                <div class="row row-2">
+                  <input type="text" class="need-in" data-k="name" placeholder="이름  예) 김하늘" maxlength="20">
+                  <input type="text" class="need-in" data-k="major" placeholder="학과·학년  예) 경영학과 4학년" maxlength="30">
+                </div>
+                <input type="text" class="need-in" data-k="tagline" placeholder="한 줄 소개  예) 데이터로 고객을 이해하는 마케터" maxlength="60">
+              </div>
+            </div>
+
+            <div class="item" data-need="about">
+              <div class="item-head"><span class="num"><span>2</span></span><label for="f-about">자기소개</label><span class="req">필수</span></div>
+              <p class="help">무엇을 좋아하고 → 어떤 경험을 했고 → 무엇을 하고 싶은지, 2~3문장으로 써요.</p>
+              <div class="fields">
+                <textarea id="f-about" class="need-in" data-k="about" rows="3" placeholder="예) 고객의 목소리를 숫자로 확인하고, 그 결과를 아이디어로 바꾸는 일을 좋아합니다. 동아리와 공모전에서 직접 기획하고 실행해 본 경험이 있습니다."></textarea>
+              </div>
+            </div>
+
+            <div class="item" data-need="strength">
+              <div class="item-head"><span class="num"><span>3</span></span><h4>강점·역량 3가지</h4><span class="req">필수</span></div>
+              <p class="help">강점마다 근거가 되는 경험을 한 줄씩 붙이면 설득력이 생겨요.</p>
+              <div class="fields">
+                <div class="row row-strength"><input type="text" class="need-in" data-k="s1" placeholder="강점 1  예) 팀 협업" maxlength="20"><input type="text" data-k="s1why" placeholder="근거  예) 30명 규모 동아리를 1년간 이끈 경험" maxlength="80"></div>
+                <div class="row row-strength"><input type="text" class="need-in" data-k="s2" placeholder="강점 2" maxlength="20"><input type="text" data-k="s2why" placeholder="근거" maxlength="80"></div>
+                <div class="row row-strength"><input type="text" class="need-in" data-k="s3" placeholder="강점 3" maxlength="20"><input type="text" data-k="s3why" placeholder="근거" maxlength="80"></div>
+              </div>
+            </div>
+
+            <div class="item" data-need="exp">
+              <div class="item-head"><span class="num"><span>4</span></span><h4>경험·활동 (2~4개)</h4><span class="req">필수</span></div>
+              <p class="help">제목 / 기간 / 역할 / 한 일 / 결과를 쓰고, 결과는 가능하면 숫자로! 2개 이상 써 주세요.</p>
+              <div class="fields">
+                <div id="expList" class="row"></div>
+                <button type="button" class="add-btn" id="addExp">＋ 경험 추가</button>
+              </div>
+            </div>
+
+            <div class="item" data-need="contact">
+              <div class="item-head"><span class="num"><span>5</span></span><h4>연락처</h4><span class="req">필수</span></div>
+              <p class="help">이메일은 꼭 넣고, 전화번호·집 주소·학번은 넣지 않아요.</p>
+              <div class="fields">
+                <div class="row row-2">
+                  <input type="email" class="need-in" data-k="email" placeholder="이메일  예) sky@example.com" maxlength="60">
+                  <input type="text" data-k="sns" placeholder="SNS·링크 (선택)  예) 인스타그램 @sky" maxlength="80">
+                </div>
+              </div>
+              <p class="warn-pii">⚠️ 전화번호처럼 보이는 숫자가 있어요. 공개 페이지에는 넣지 않는 것이 안전해요.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 3 목적별 맞춤 내용 -->
+        <div class="b-block b-more">
+          <div class="b-block-head">
+            <span class="b-tag">STEP 3</span>
+            <h3>목적에 맞는 내용 <span class="more-name" id="moreName"></span></h3>
+            <span class="opt">선택</span>
+          </div>
+          <div class="b-block-body">
+            <p class="help help-flat">STEP 1에서 고른 목적에 맞춰 보여주면 좋은 내용이에요. 쓸 수 있는 것만 채우세요.</p>
+            <div class="sub-list" id="purposeMore"></div>
+          </div>
+        </div>
+
+        <!-- STEP 4 더하기 -->
+        <div class="b-block b-extra">
+          <div class="b-block-head">
+            <span class="b-tag">STEP 4</span>
+            <h3>더하면 좋은 내용</h3>
+            <span class="opt">선택</span>
+          </div>
+          <div class="b-block-body">
+            <p class="help help-flat">쓰고 싶은 것만 채우세요. 비워 둔 항목은 프롬프트에 들어가지 않아요.</p>
+            <div class="sub-list" id="extraFields"></div>
+          </div>
+        </div>
+
+        <!-- STEP 5 O·M·P·T -->
+        <div class="b-block b-design">
+          <div class="b-block-head">
+            <span class="b-tag">STEP 5</span>
+            <h3>디자인과 조건 (O·M·P·T)</h3>
+          </div>
+          <div class="b-block-body" id="designFields"></div>
+        </div>
+      </div>
+
+      <aside class="b-out">
+        <div class="b-out-head">
+          <h3>완성된 프롬프트</h3>
+          <span class="b-count" id="bCount">0자</span>
+        </div>
+        <ul class="b-check" id="bCheck"></ul>
+        <div class="b-preview" id="bPreview"></div>
+        <div class="b-actions">
+          <button class="btn btn-main" id="bCopy">📋 프롬프트 복사하기</button>
+          <button class="btn btn-ghost" id="bSample">예시 불러오기</button>
+          <button class="btn btn-ghost" id="bClear">모두 지우기</button>
+        </div>
+        <p class="b-note">복사한 프롬프트를 Claude, ChatGPT, Gemini 등 AI 채팅창에 붙여 넣으세요.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 배포 ===================== -->
+<section class="section" id="deploy">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">07</span>
+      <div>
+        <p class="eyebrow">DEPLOY · 깃허브로 배포하기</p>
+        <h2 class="sec-title">내 웹페이지에<br><em>주소</em>를 달아요</h2>
+      </div>
+    </header>
+    <p class="sec-lead dropcap">지금 만든 웹페이지는 내 컴퓨터에서만 보입니다. <b>깃허브(GitHub)</b>의 무료 기능인 <b>GitHub Pages</b>를 쓰면, 누구나 열어 볼 수 있는 인터넷 주소가 생깁니다. 처음 한 번만 따라 하면 10분이면 충분해요.</p>
+
+    <div class="url-demo" aria-hidden="true">
+      <div class="url-dots"><i></i><i></i><i></i></div>
+      <div class="url-bar">🔒 https://<b class="u-id">내아이디</b>.github.io/portfolio/</div>
+      <span class="url-label">완성되면 이런 주소가 생겨요!</span>
+    </div>
+
+    <ol class="deploy-steps">
+      <li class="dstep">
+        <div class="d-no">STEP<b>1</b></div>
+        <div class="d-body">
+          <h3>깃허브 가입하기</h3>
+          <p><b>github.com</b>에 들어가 <span class="kbd">Sign up</span>을 눌러 가입합니다. 이메일 인증까지 마쳐 주세요.</p>
+          <p class="d-tip">💡 <b>아이디(Username)가 주소에 그대로 들어갑니다.</b> 영어 소문자로 짧고 단정하게 정하세요. 예) haneul-kim</p>
+        </div>
+      </li>
+      <li class="dstep">
+        <div class="d-no">STEP<b>2</b></div>
+        <div class="d-body">
+          <h3>웹페이지 파일 준비하기</h3>
+          <p>AI가 만든 코드를 복사해 메모장에 붙여 넣고 <b>파일 이름을 <code>index.html</code></b>로 저장합니다. (AI 화면에 다운로드 버튼이 있으면 내려받은 뒤 이름만 바꿔도 됩니다.)</p>
+          <p class="d-tip">💡 메모장에서 저장할 때 파일 형식은 <b>모든 파일</b>, 인코딩은 <b>UTF-8</b>로 고르세요. 이름이 꼭 <code>index.html</code>이어야 주소로 바로 열립니다.</p>
+        </div>
+      </li>
+      <li class="dstep">
+        <div class="d-no">STEP<b>3</b></div>
+        <div class="d-body">
+          <h3>새 저장소(Repository) 만들기</h3>
+          <p>오른쪽 위 <span class="kbd">+</span> → <span class="kbd">New repository</span>를 누릅니다.</p>
+          <ul class="d-list">
+            <li><b>Repository name</b>: <code>portfolio</code></li>
+            <li>공개 범위: <b>Public</b></li>
+            <li><b>Add README</b>를 켜기</li>
+            <li><span class="kbd">Create repository</span> 클릭</li>
+          </ul>
+        </div>
+      </li>
+      <li class="dstep">
+        <div class="d-no">STEP<b>4</b></div>
+        <div class="d-body">
+          <h3>파일 올리기</h3>
+          <p>저장소 화면에서 <span class="kbd">Add file</span> → <span class="kbd">Upload files</span>를 누르고, <code>index.html</code>을 끌어다 놓습니다. 사진을 쓴다면 사진 파일도 함께 올립니다. 아래쪽 <span class="kbd">Commit changes</span>를 누르면 저장 완료!</p>
+          <p class="d-tip">💡 사진 파일 이름은 코드에 적힌 이름과 <b>대소문자까지 똑같아야</b> 보입니다. (profile.JPG ≠ profile.jpg)</p>
+        </div>
+      </li>
+      <li class="dstep">
+        <div class="d-no">STEP<b>5</b></div>
+        <div class="d-body">
+          <h3>GitHub Pages 켜기</h3>
+          <p>저장소 위쪽 <span class="kbd">Settings</span> → 왼쪽 메뉴 <span class="kbd">Pages</span>로 갑니다.</p>
+          <ul class="d-list">
+            <li><b>Build and deployment</b>의 Source: <b>Deploy from a branch</b></li>
+            <li>Branch: <b>main</b>, 폴더: <b>/ (root)</b></li>
+            <li><span class="kbd">Save</span> 클릭</li>
+          </ul>
+        </div>
+      </li>
+      <li class="dstep">
+        <div class="d-no">STEP<b>6</b></div>
+        <div class="d-body">
+          <h3>주소 확인하기</h3>
+          <p>1~2분(길게는 10분) 기다린 뒤 Pages 화면을 새로고침하면 위쪽에 <b>Your site is live at …</b> 이라는 문구와 주소가 나타납니다. <span class="kbd">Visit site</span>를 눌러 내 웹페이지가 열리는지 확인하세요.</p>
+          <p class="d-tip">🎉 내 주소: <code>https://내아이디.github.io/portfolio/</code> → 아래 <a href="#gallery">자랑하기</a>에 올려 주세요!</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="deploy-extra">
+      <div class="dx">
+        <h4>✏️ 고치고 싶을 때</h4>
+        <p>AI로 수정한 <code>index.html</code>을 STEP 4처럼 다시 올리면 덮어써집니다. 1~2분 뒤 반영되며, 안 바뀌어 보이면 <b>Ctrl + F5</b>(맥은 Cmd + Shift + R)로 새로고침하세요.</p>
+      </div>
+      <div class="dx">
+        <h4>📁 주소 끝을 꼭 확인!</h4>
+        <p>주소 끝에 저장소 이름 <code>/portfolio/</code>가 붙어야 열립니다. <code>https://내아이디.github.io/</code>만 입력하면 404가 떠요.</p>
+      </div>
+      <div class="dx">
+        <h4>🚨 404 페이지가 떠요</h4>
+        <p>① 조금 더 기다려 보기 ② 파일 이름이 <code>index.html</code>인지 확인 ③ 저장소가 Public인지 확인 ④ Pages 설정에서 Save를 눌렀는지 확인</p>
+      </div>
+      <div class="dx">
+        <h4>🔐 공개 전에 한 번 더</h4>
+        <p>Public 저장소의 파일은 <b>누구나 볼 수 있습니다.</b> 전화번호, 주소처럼 공개하고 싶지 않은 정보가 없는지 확인한 뒤 올리세요.</p>
+      </div>
+    </div>
+    <p class="d-note">※ 깃허브 화면의 버튼 위치나 이름은 업데이트에 따라 조금 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- ===================== 08 자랑하기 ===================== -->
+<section class="section alt" id="gallery">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-num">08</span>
+      <div>
+        <p class="eyebrow">SHOWCASE · 자랑하기</p>
+        <h2 class="sec-title">우리가 만든<br><em>포트폴리오 갤러리</em></h2>
+      </div>
+    </header>
+    <p class="sec-lead">내 웹페이지 주소를 저장하면 아래 갤러리에 올라갑니다. 친구들의 작품을 눌러 구경하고, 마음에 드는 디자인은 내 프롬프트에 참고해 보세요.</p>
+
+    <form class="g-form" id="gForm" novalidate>
+      <div class="g-field">
+        <label for="gName">이름 또는 닉네임</label>
+        <input id="gName" maxlength="20" placeholder="예) 김하늘" autocomplete="off" required>
+      </div>
+      <div class="g-field">
+        <label for="gTitle">한 줄 소개 <small>(선택)</small></label>
+        <input id="gTitle" maxlength="40" placeholder="예) 데이터로 고객을 이해하는 마케터" autocomplete="off">
+      </div>
+      <div class="g-field g-url">
+        <label for="gUrl">웹페이지 주소</label>
+        <input id="gUrl" type="url" maxlength="300" placeholder="https://내아이디.github.io/portfolio/" autocomplete="off" required>
+      </div>
+      <button class="btn btn-main g-save" id="gSave" type="submit">💾 저장하기</button>
+      <p class="g-msg" id="gMsg" role="status"></p>
+    </form>
+
+    <div class="g-bar">
+      <h3>작품 <b id="gCount">0</b>개</h3>
+      <button class="btn btn-sm btn-ghost" id="gReload" type="button">↻ 새로고침</button>
+    </div>
+    <p class="g-mode" id="gMode"></p>
+    <div class="g-list" id="gList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-word" aria-hidden="true"><span class="f-p1">P</span><span class="f-r">R</span><span class="f-o">O</span><span class="f-m">M</span><span class="f-p2">P</span><span class="f-t">T</span></div>
+  <p class="footer-title">미래 역량 인공지능 아카데미 - AI 메이킹 클래스 : 윤리부터 창작까지</p>
+  <p class="footer-maker">제작 : 신라대학교 컴퓨터공학과 김지연 and Claude</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/builder.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
