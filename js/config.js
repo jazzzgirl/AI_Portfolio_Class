@@ -7,4 +7,4 @@
    비워 두면 이 브라우저에만 저장되는 연습 모드로 동작합니다.
    (설정 방법: 함께 드린 '자랑하기_설정' 폴더의 안내 문서 참고)
    ========================================================= */
-window.GALLERY_URL = "https://script.google.com/macros/s/AKfycbxZDCjCR6E5mA-_6SEhKiz6FKj8MzNblNaZf2wRtulq7XWMKDVDjjf_gVakaD8OWWGm-A/exec";
+window.GALLERY_URL = "";
